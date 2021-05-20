@@ -7,14 +7,18 @@ import {
 import Home from './views/home/Home'
 import NotFound from './views/notFound/NotFound'
 import Cursos from './views/cursos/Cursos'
-
+import NavBar from './components/navBar/NavBar'
 const Routes = () => {
     return ( 
         <Router>
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/cursos" component={Cursos}/>
+                <NavBar>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/cursos" component={Cursos}/>
+                </NavBar>
+                
                 <Route component={NotFound}/>
+
             </Switch>
         </Router>
      );
