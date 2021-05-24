@@ -1,36 +1,29 @@
 .NavBar{
     width: 100%;
     height: 100%;
-
 }
 
 .NavBar-Style{
+    display:flex;
+    flex-direction:row;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height:60px;
-}
-
-.NavBar-Options{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    height: 100%;
-    margin: 0;
-}
-
-.NavBar-Options li{
-
-    margin-left: 30px;
+    width:100%;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
-.NavBar-Options li a{
+.navlink{
     text-decoration: none;
-    cursor: pointer;
-    vertical-align: middle;
+    height: 100%;
+    padding:0 5px 0 5px;
+    color:black;
 }
 
-.NavBar-Options li a:hover{
-    color: red;
+.navlink:hover{
+    background-color:rgb(37, 75, 145) !important;
+    color:white;
 }
+
 
