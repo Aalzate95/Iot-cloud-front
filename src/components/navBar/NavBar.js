@@ -80,7 +80,9 @@ const NavBar = ({children}) => {
                     <p>Cerrar sesión</p>
                 </div>
             </nav>
-            {children}
+            <div>
+                {children}
+            </div>
         </div>
      );
 }
