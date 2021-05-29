@@ -10,16 +10,40 @@ import Courses from './views/courses/Courses'
 import Evaluation from './views/evaluation/Evaluation'
 import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
+import Resources from './views/resources/Resources';
 const Routes = () => {
     return ( 
         <Router>
             <Switch>
-                <NavBar>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/courses" component={Courses}/>
-                    <Route path="/evaluations" component={Evaluation}/>
-                    <Route path="/feedback" component={FeedBack}/>
-                </NavBar>
+                <Route exact path="/">
+                    <NavBar>
+                        <Home/>
+                    </NavBar>
+                </Route>
+
+                <Route path="/courses">
+                    <NavBar>
+                        <Courses/>
+                    </NavBar>
+                </Route>
+                    
+                <Route path="/evaluations" >
+                    <NavBar>
+                        <Evaluation/>
+                    </NavBar>
+                </Route>
+
+                <Route path="/feedback">
+                    <NavBar>
+                        <FeedBack/>
+                    </NavBar>
+                </Route>
+
+                <Route path="/resources">
+                    <NavBar>
+                        <Resources/>
+                    </NavBar>
+                </Route>
 
                 <Route component={NotFound}/>
 

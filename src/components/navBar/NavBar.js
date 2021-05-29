@@ -2,9 +2,10 @@ import React,{useState} from 'react';
 import './NavBar.css'
 import { NavLink } from 'react-router-dom'
 import { FiLogOut } from "react-icons/fi";
-import {IoHome,IoStatsChart,IoBookOutline} from "react-icons/io5";
+import {IoHome,IoStatsChart,IoGrid} from "react-icons/io5";
 import { FaCommentAlt } from "react-icons/fa";
-import {BiArrowFromRight, BiArrowFromLeft} from "react-icons/bi";
+import {BiArrowFromRight, BiArrowFromLeft,BiBookBookmark} from "react-icons/bi";
+
 
 const usuario = {
     name:"Usuario 1",
@@ -16,7 +17,7 @@ const NavBar = ({children}) => {
     const [isHidden,setIsHidden] = useState(false)
 
     const activeStyles = {        
-        color:"black",
+        color:"lightgray",
     }
 
     const renderPerfilImage = () =>{
@@ -54,11 +55,17 @@ const NavBar = ({children}) => {
                             </div>
                             <p>Inicio</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute"  to='/cursos' activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute"  to='/courses' activeStyle={activeStyles}>
                             <div className="icon">
-                                <IoBookOutline/>
+                                <IoGrid/>
                             </div>
                             <p>Cursos</p>
+                        </NavLink>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/resources' activeStyle={activeStyles}>
+                            <div className="icon">
+                                <BiBookBookmark/>
+                            </div>
+                            <p>Recursos</p>
                         </NavLink>
                         <NavLink className="Nav_link" activeClassName="activeRoute" to='/evaluations' activeStyle={activeStyles}>
                             <div className="icon">

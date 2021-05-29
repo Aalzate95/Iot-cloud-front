@@ -15,6 +15,11 @@
     color:lightgray;
 }
 
+.Nav_link p{
+    color:lightgray;
+}
+
+
 .NavBar-links{
     display:flex;
     flex-direction: column;
@@ -45,6 +50,10 @@
     cursor:pointer;
 }
 
+.Nav_link:hover p,.Nav_link:hover svg{
+    color:black;
+}
+
 .Nav_link:active{
     color:gray
 }
@@ -71,10 +80,12 @@
 }
 
 .icon{
+    color:lightgray;
     margin:10px 5px 0 0;
 }
 
 .NavBar-Style svg{
+    
     font-size:1.5rem;
 }
 
