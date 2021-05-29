@@ -19,10 +19,10 @@ const Routes = () => {
                 <NavBar>
                     <Route exact path="/" component={Home}/>
                     <Route path="/courses" component={Courses}/>
-                    <Route path="/evaluations" component={Evaluation}/>
+                    <Route path="/evaluations/inicio" component={Evaluation}/>
                     <Route path="/feedback" component={FeedBack}/>
-                    <Route path="/Leccion" component={Leccion}/>
-                    <Route path="/ControlLectura" component={ControlLectura}/>
+                    <Route path="/evaluations/leccion" component={Leccion}/>
+                    <Route path="/evaluations/controlLectura" component={ControlLectura}/>
                 </NavBar>
 
                 <Route component={NotFound}/>

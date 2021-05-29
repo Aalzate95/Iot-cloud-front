@@ -60,7 +60,7 @@ const NavBar = ({children}) => {
                             </div>
                             <p>Cursos</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/evaluations' activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/evaluations/inicio' activeStyle={activeStyles}>
                             <div className="icon">
                                 <IoStatsChart/>
                             </div>

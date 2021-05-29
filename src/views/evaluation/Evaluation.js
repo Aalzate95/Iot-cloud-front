@@ -4,22 +4,22 @@ import { useHistory } from "react-router-dom";
 import { get } from 'lodash';
 
 const Evaluation = () => {
-    const typeEvaluation = useState({1: "ControlLectura", 2: "Leccion"});
+    
     let history = useHistory();
 
-    function handleLecture() { 
-        history.push("/ControlLectura");
+    const handleLecture = () => {
+        history.push("/evaluations/controlLectura");
     }
-    function handleLeccion() {
-        history.push("Leccion");
+    const handleLeccion = () => {
+        history.push("/evaluations/leccion");
     }
     
 
     return ( 
         <div>
             <div>
-                <div><button onclick={handleLecture()} >Control de lectura</button></div>
-                <div><button onclick={handleLeccion()} >Lección</button></div>
+                <div><button onClick={() =>handleLecture()} >Control de lectura</button></div>
+                <div><button onClick={() => handleLeccion()} >Lección</button></div>
             </div>
         </div>
      );
