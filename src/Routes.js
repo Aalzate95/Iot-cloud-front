@@ -12,6 +12,7 @@ import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
 import Leccion from './views/evaluation/components/Leccion'
 import ControlLectura from './views/evaluation/components/ControlLectura'
+import Examen from './views/evaluation/components/Examen'
 const Routes = () => {
     return ( 
         <Router>
@@ -23,6 +24,7 @@ const Routes = () => {
                     <Route path="/feedback" component={FeedBack}/>
                     <Route path="/evaluations/leccion" component={Leccion}/>
                     <Route path="/evaluations/controlLectura" component={ControlLectura}/>
+                    <Route path="/evaluations/examen" component={Examen}/>
                 </NavBar>
 
                 <Route component={NotFound}/>

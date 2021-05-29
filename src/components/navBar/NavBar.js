@@ -16,14 +16,19 @@ const NavBar = ({children}) => {
     const [isHidden,setIsHidden] = useState(false)
 
     const activeStyles = {        
-        color:"black",
+        color:"white",
+        backgroundColor: "#D97706",
     }
 
     const renderPerfilImage = () =>{
         return(
-            <div className="NavBar-Profile">
-                <div className="Profile-Photo" style={{backgroundImage:`url(${usuario.image})`}}></div>
-                <div className="Profile-description">
+            <div className="flex flex-row space-x-3">
+                <div className="flex mx-1 pt-2" style={{backgroundImage:`url(${usuario.image})`}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="white">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div className="text-white">
                     <p>{usuario.name}</p>
                     <p>{usuario.type}</p>
                 </div>
@@ -32,11 +37,11 @@ const NavBar = ({children}) => {
     }
 
     return ( 
-        <div className="NavBar">
-            <nav  className="NavBar-Style" >
-                <div className="HideNav">
-                    <div className="HideNav-button" onClick={()=>{setIsHidden(!isHidden)}}>
-                        <BiArrowFromRight
+        <div className="flex flex-row">
+            <nav  className="flex flex-col h-screen bg-yellow-800" >
+                <div className="flex justify-end h-12 pr-3">
+                    <div className="text-white text-lg rounded-full" onClick={()=>{setIsHidden(!isHidden)}}>
+                        <BiArrowFromRight 
                             style={{display:`${isHidden?"none":"inline"}`}}
                         />
                         <BiArrowFromLeft
@@ -44,40 +49,44 @@ const NavBar = ({children}) => {
                         />
                     </div>
                 </div>
-                <div className="NavBar-user">
+                <div className="flex flex-row">
                     {renderPerfilImage()}
                 </div>
-                <div className="NavBar-links">
-                        <NavLink className="Nav_link" activeClassName="activeRoute" exact={true} to='/' activeStyle={activeStyles}>
-                            <div className="icon">
-                                <IoHome/>
-                            </div>
+                <div className="mt-10 h-48 inset-0 space-y-2">
+                        <div className="pt-1 hover:bg-yellow-600">
+                        <NavLink className="flex my-2 p-2 space-x-3 text-white rounded-md hover:bg-yellow-600" exact={true} to='/' activeStyle={activeStyles}>
+                            
+                                <IoHome className="w-5 h-5"/>
+                            
                             <p>Inicio</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute"  to='/cursos' activeStyle={activeStyles}>
-                            <div className="icon">
-                                <IoBookOutline/>
+                        </div>
+                        <NavLink className="flex my-2 p-2 space-x-3 text-white rounded-md hover:bg-white hover:text-yellow-800"  to='/cursos' activeStyle={activeStyles}>
+                            <div className="pt-1">
+                                <IoBookOutline className="w-5 h-5"/>
                             </div>
                             <p>Cursos</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/evaluations/inicio' activeStyle={activeStyles}>
-                            <div className="icon">
-                                <IoStatsChart/>
+                        <NavLink className="flex my-2 p-2 space-x-3 text-white rounded-md hover:bg-white hover:text-yellow-800" to='/evaluations/inicio' activeStyle={activeStyles}>
+                            <div className="pt-1">
+                                <IoStatsChart className="w-5 h-5"/>
                             </div>
                             <p>Evaluación</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/feedback' activeStyle={activeStyles}>
-                            <div className="icon">
-                                <FaCommentAlt/>
+                        <NavLink className="flex my-2 p-2 space-x-3 text-white rounded-md hover:bg-white hover:text-yellow-800" to='/feedback' activeStyle={activeStyles}>
+                            <div className="pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pb-1" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                </svg>
                             </div>
                             <p>Retroalimentación</p>
                         </NavLink>
                 </div>
-                <div className="NavBar-logout">
-                    <div className="icon">
-                        <FiLogOut/>
+                <div className="flex flex-row absolute inset-x-0 bottom-0 h-10 px-3 text-white">
+                    <div className="pt-1 pr-2">
+                        <FiLogOut className="w-5 h-5"/>
                     </div>
-                    <p>Cerrar sesión</p>
+                    <p className="align-center">Cerrar sesión</p>
                 </div>
             </nav>
             <div>
