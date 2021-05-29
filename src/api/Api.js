@@ -29,7 +29,6 @@ const makeDelete = (url,object={}, options = {}) => {
     return fetch(url, {body, headers, method: 'DELETE'}).then(res =>res.json());
 };
 
-
 // Esta función es para que la usen como ejemplo o referencia.
 export const fetchRecurso = (id) =>{
     const url ="http://localhost:8000/recursos/"+id+"/";
@@ -37,3 +36,4 @@ export const fetchRecurso = (id) =>{
     const params ={}
     return makeGet (url,{params,headers});
 }
+
