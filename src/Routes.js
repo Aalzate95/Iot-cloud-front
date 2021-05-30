@@ -10,6 +10,7 @@ import Courses from './views/courses/Courses'
 import Evaluation from './views/evaluation/Evaluation'
 import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
+import Foro from './components/foro/Foro'
 const Routes = () => {
     return ( 
         <Router>
@@ -19,6 +20,7 @@ const Routes = () => {
                     <Route path="/courses" component={Courses}/>
                     <Route path="/evaluations" component={Evaluation}/>
                     <Route path="/feedback" component={FeedBack}/>
+                    <Route path="/question" component={Foro}/>
                 </NavBar>
 
                 <Route component={NotFound}/>
