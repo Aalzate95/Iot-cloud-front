@@ -20,7 +20,7 @@ const Routes = () => {
                     <Route path="/courses" component={Courses}/>
                     <Route path="/evaluations" component={Evaluation}/>
                     <Route path="/feedback" component={FeedBack}/>
-                    <Route path="/question" component={Foro}/>
+                    <Route path="/questions" component={Foro}/>
                 </NavBar>
 
                 <Route component={NotFound}/>
