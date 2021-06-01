@@ -1,24 +1,16 @@
 import React from 'react';
 import './Resources.css'
+import { useHistory } from 'react-router-dom';
+import data from '../../data/dataResources.json'
 
-const data = {
-    results:{
-        papers:[
-            {},
-            {},
-            {},
-        ],
-        tutorials:[
+const Resources = () => {
 
-        ]
-    }
-}
+    const history = useHistory();
 
-
-const renderResourcesCards = Object.keys(data.results).map((resourceKind)=>{
+    const renderResourcesCards = Object.keys(data.results).map((resourceKind,index)=>{
         let totalElements = data.results[resourceKind].length;
         return(
-            <div>
+            <div className="card" key={index} onClick={()=>history.push(`/resources/${resourceKind}`)}>
                 <div>
                     <h3>{resourceKind}</h3>
                     <p>Cantidad de elementos: {totalElements}</p>
@@ -26,14 +18,9 @@ const renderResourcesCards = Object.keys(data.results).map((resourceKind)=>{
             </div>
             )
     })
-
-    
-
-
-const Resources = () => {
     return ( 
     <div className="Resources">
-        <div>
+        <div className="Resources-cards">
             {renderResourcesCards}
         </div>
     </div> 

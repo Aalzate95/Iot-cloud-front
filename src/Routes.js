@@ -11,7 +11,12 @@ import Evaluation from './views/evaluation/Evaluation'
 import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
 import Resources from './views/resources/Resources';
+import Papers from './views/resources/papers/Papers'
+
 const Routes = () => {
+
+
+
     return ( 
         <Router>
             <Switch>
@@ -39,9 +44,15 @@ const Routes = () => {
                     </NavBar>
                 </Route>
 
-                <Route path="/resources">
+                <Route path="/resources/main">
                     <NavBar>
                         <Resources/>
+                    </NavBar>
+                </Route>
+
+                <Route path="/resources/papers">
+                    <NavBar>
+                        <Papers/>
                     </NavBar>
                 </Route>
 
@@ -53,3 +64,4 @@ const Routes = () => {
 }
  
 export default Routes;
+ 

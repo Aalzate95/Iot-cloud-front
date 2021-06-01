@@ -61,7 +61,7 @@ const NavBar = ({children}) => {
                             </div>
                             <p>Cursos</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/resources' activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/resources/main' activeStyle={activeStyles}>
                             <div className="icon">
                                 <BiBookBookmark/>
                             </div>
@@ -87,7 +87,7 @@ const NavBar = ({children}) => {
                     <p>Cerrar sesión</p>
                 </div>
             </nav>
-            <div>
+            <div className="views">
                 {children}
             </div>
         </div>

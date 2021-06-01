@@ -1,0 +1,65 @@
+.TableView{
+    margin: 15px 3% 20px 2%;
+}
+
+.table-style{
+    padding:0;
+}
+
+.table-header{
+    border-radius: 3px;
+    display: grid;
+    justify-content: space-between;
+    text-align: center;
+    background-color:#223265;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color:#ffffff;
+}
+
+.content-table-style{
+    display:flex;
+    flex-direction: column;
+    padding:0;
+}
+
+.table-row{
+    border-radius: 3px;
+    display: grid;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.table-row:hover {
+    background-color:#e9e8e8;
+}
+
+.table-header,.table-row{
+    grid-template-columns: 20px 2fr 3fr 1fr 1fr;
+}
+
+.col1,.col2,.col3.col4{
+    padding:5px 4px 5px 4px;
+}
+
+.col0{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    justify-content:center;
+}
+.col3{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.small{
+    font-size:12px
+}

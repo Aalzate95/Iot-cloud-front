@@ -3,6 +3,11 @@
     min-height: 100%;
 }
 
+.views{
+    min-height:100vh;
+    margin-left:210px;
+}
+
 .NavBar-Style{
     position:absolute;
     left:0;
@@ -10,8 +15,8 @@
     display:grid;
     grid-template-rows: 1fr 1fr 4fr 1fr;
     height:100%;
-    width:auto;
-    background-color:#38485e;
+    width:200px;
+    background-color:#223265;
     color:lightgray;
 }
 
