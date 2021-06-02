@@ -12,6 +12,7 @@ import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
 import Resources from './views/resources/Resources';
 import Papers from './views/resources/papers/Papers'
+import CreatePaper from './views/resources/papers/CreatePaper'
 
 const Routes = () => {
 
@@ -53,6 +54,12 @@ const Routes = () => {
                 <Route path="/resources/papers">
                     <NavBar>
                         <Papers/>
+                    </NavBar>
+                </Route>
+
+                <Route path="/resources/create-paper">
+                    <NavBar>
+                        <CreatePaper/>
                     </NavBar>
                 </Route>
 

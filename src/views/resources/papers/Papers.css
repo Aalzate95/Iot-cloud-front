@@ -18,3 +18,57 @@
     background-color:#223265;
     color:white
 }
+
+.create-paper-form{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.go-back p{
+    color:#223265;
+    font-weight:bold;
+    text-align:left;
+}
+.go-back p:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
+
+.form-content{
+    display:flex;
+    flex-direction: column;
+    height:50%;
+    vertical-align:middle;
+    justify-content:center;
+    align-items:center;
+}
+
+.content-top{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-top:20px;
+    align-items:center;
+}
+
+.content-middle{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-top:20px;
+    align-items:center;
+    width:100%;
+}
+
+.content-middle-select {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.content-bottom{
+    margin:20px 0 20px 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}

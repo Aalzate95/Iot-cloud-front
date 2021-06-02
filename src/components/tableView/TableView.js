@@ -7,7 +7,7 @@ Componente que permite renderizar en una tabla contenido con un header fijo
     - Descripción
     - Cursos
     - Tags
-Dependencias:
+Parametros:
     - Requiere que le envien la data a renderizar como lista de objetos.
     - Listado de elementos seleccionados
     - Actualizador del listado de elementos seleccionados
