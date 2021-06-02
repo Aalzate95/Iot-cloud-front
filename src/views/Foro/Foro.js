@@ -3,8 +3,18 @@ import React, {useState} from 'react';
 const Foro = () => {
   const [question,setQuestion] = useState('')
   const [tema, setTema] = useState(null)
+  const [questions] = useState([]);
+  const [questionId,setQuestionId] = useState(0);
+  let questionId = 0;
 
   const OnClickEnviar = ()=>{
+    setQuestionId(questionId+=1);
+    const q= {
+        id: questionId,
+        question: question,
+        subject: tema
+    }
+    questions.push(q);
       alert(
           `Se envió la siguiente pregunta: ${question}`
       )
