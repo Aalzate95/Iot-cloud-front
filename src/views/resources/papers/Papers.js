@@ -5,13 +5,13 @@ import TableView from '../../../components/tableView/TableView'
 import { useHistory } from 'react-router-dom';
 
 
-const Papers = () => {
+const Papers = ({resourcesData,setResourcesData}) => {
     const[selectedRows,setSelectedRows] = useState([])
     const[papersData,setPapersData] = useState([])
     const history = useHistory();
 
     useEffect(() => {
-        setPapersData(data.results["papers"])
+        setPapersData(resourcesData.results["papers"])
       }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const updateSelectedList = id => {
@@ -27,21 +27,18 @@ const Papers = () => {
     }
 
     const onClickDeletePaper = () =>{
-        console.log(`eliminar: ${selectedRows}`)
+        let newList = resourcesData
+        resourcesData.results["papers"].forEach((paper,index)=>{
+            if (selectedRows.includes(paper.id)){
+                newList.results.papers.splice(index,1)
+            }
+        })
+        setResourcesData(newList)
+        setPapersData(newList.results.papers)
     }
     
     const onClickCreatePaper = () =>{
-        history.push(
-            {
-                pathname:'/resources/create-paper',
-                search: '?query=abc',
-                state:{
-                    papersData:papersData,
-                    
-                },
-                setPapersData:setPapersData(),
-            }
-        )
+        history.push('/resources/create-paper')
     }
 
     return ( 
@@ -62,3 +59,13 @@ const Papers = () => {
 }
  
 export default Papers;
+
+/*{
+                pathname:'/resources/create-paper',
+                search: '?query=abc',
+                 state:{
+                    papersData:papersData,
+                    
+                }, 
+                
+            }*/

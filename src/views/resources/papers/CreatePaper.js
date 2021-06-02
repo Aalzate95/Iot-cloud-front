@@ -15,8 +15,10 @@ const CreatePaper = (props) => {
 
     const CreateNewPaper = () =>{
         
-        let newList = location.state.papersData
-        newList.push({
+        let newList = props.resourcesData/* location.state.papersData */
+        let id = newList.results["papers"].length;
+        newList.results["papers"].push({
+                id,
                 title, 
                 description, 
                 authors,
@@ -24,7 +26,7 @@ const CreatePaper = (props) => {
                 file,
                 tags
             })
-        console.log(newList)
+        props.setResourcesData(newList)
         /* location.setPapersData(newList) */
         history.push('/resources/papers')
     }

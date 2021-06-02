@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './TableView.css'
 
 /*
@@ -22,6 +22,10 @@ Funcionalidades Pendientes:
 */
 
 const TableView = ({data,selectedRows,updateSelectedList}) =>{
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const [orderBy,setOrderBy] = useState(null)
+    const [cantPerPage] = useState(5)
 
     const RenderRows = data.map((element)=>{
         return(

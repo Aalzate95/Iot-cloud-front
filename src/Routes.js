@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,10 +14,17 @@ import Resources from './views/resources/Resources';
 import Papers from './views/resources/papers/Papers'
 import CreatePaper from './views/resources/papers/CreatePaper'
 
+import datosRecursos from './data/dataResources.json'
+
 const Routes = () => {
 
+    const [resourcesData, setResourcesData] = useState(datosRecursos)
 
-
+    useEffect(() => {
+        setResourcesData(datosRecursos)
+      }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    
+    
     return ( 
         <Router>
             <Switch>
@@ -47,19 +54,27 @@ const Routes = () => {
 
                 <Route path="/resources/main">
                     <NavBar>
-                        <Resources/>
+                        <Resources
+                            resourcesData={resourcesData}
+                        />
                     </NavBar>
                 </Route>
 
                 <Route path="/resources/papers">
                     <NavBar>
-                        <Papers/>
+                        <Papers
+                            resourcesData={resourcesData}
+                            setResourcesData = {setResourcesData}
+                        />
                     </NavBar>
                 </Route>
 
                 <Route path="/resources/create-paper">
                     <NavBar>
-                        <CreatePaper/>
+                        <CreatePaper
+                            resourcesData={resourcesData}
+                            setResourcesData = {setResourcesData}
+                        />
                     </NavBar>
                 </Route>
 
