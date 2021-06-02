@@ -73,11 +73,17 @@ const NavBar = () => {
                             </div>
                             <p>Evaluación</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/feedback' activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/feedback' activeStyle={activeStyles}>  
                             <div className="icon">
                                 <FaCommentAlt/>
                             </div>
                             <p>Retroalimentación</p>
+                        </NavLink>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/questions' activeStyle={activeStyles}>
+                            <div className="icon">
+                                <FaCommentAlt/>
+                            </div>
+                            <p>Preguntas</p>
                         </NavLink>
                 </div>
                 <div className="NavBar-logout">
