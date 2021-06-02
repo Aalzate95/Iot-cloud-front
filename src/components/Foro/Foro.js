@@ -45,4 +45,4 @@ class ForoClass extends React.Component {
     const res = instancia.render();
   }
 
-  export default Foro
+export default Foro; 
