@@ -10,7 +10,7 @@ import Courses from './views/courses/Courses'
 import Evaluation from './views/evaluation/Evaluation'
 import FeedBack from './views/feedBack/FeedBack'
 import NavBar from './components/navBar/NavBar'
-import Foro from './components/foro/Foro'
+import Foro from './views/foro/Foro'
 const Routes = () => {
     return ( 
         <Router>

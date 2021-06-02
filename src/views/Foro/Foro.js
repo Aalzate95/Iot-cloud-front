@@ -14,6 +14,7 @@ const Foro = () => {
       {nombre:"recurso1", descripcion:"lonadsjdansda", calificaciones:[12,34]},
       {nombre:"recurso3", descripcion:"dasdjnasdaknd", calificaciones:[13,43]}
   ]
+  const temas = [{tema:"POO"},{tema:"Analisis de Algoritmos"}, {tema:"IA"}];
 
   const renderDatos = listaDatos.map((e)=>{
       return(
@@ -27,21 +28,31 @@ const Foro = () => {
               })}
           </div>
           )
-  })
+  });
+  const renderTema = temas.map((x,index)=>{
+    return(
+    <option value={x.tema} key={index}>{x.tema}</option>
+    )
+
+  });
 
   return ( 
       <div>
+          Aqui puedes realizar preguntas sobre los temas revisados
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+
           <label>
           Tema:
-              <select value={this.state.value} onChange={(e)=>{setTema(e.target.value)}}>
-              <option value="Tema1">Tema1</option>
-              <option value="Tema2">Tema2</option>
-              <option value="Tema3">Tema3</option>
-              <option value="Tema4">Tema4</option>
+              <select defaultValue = {tema} onChange={(e)=>{setTema(e.target.value)}}>
+              {renderTema}
               </select>
           </label>
           <label>
-              Mensaje:
+              Pregunta:
               <textarea type="text" onChange={(e)=>{setQuestion(e.target.value)}}/>
           </label>
           

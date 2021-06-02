@@ -1,3 +1,5 @@
+import React from "react"
+
 class ForoClass extends React.Component {
     constructor(props) {
       super(props);
@@ -40,7 +42,7 @@ class ForoClass extends React.Component {
     }
   }
   
-  const Foro= ()=>{
+  const Foro= (props)=>{
     const instancia = new ForoClass(props);
     const res = instancia.render();
   }
