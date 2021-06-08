@@ -9,7 +9,7 @@ import NotFound from './views/notFound/NotFound'
 import Courses from './views/courses/Courses'
 import Evaluation from './views/evaluation/Evaluation'
 import FeedBack from './views/feedBack/FeedBack'
-import NavBar from './components/navBar/NavBar'
+import Dashboard from './components/dashboard/Dashboard'
 import Resources from './views/resources/Resources';
 import Papers from './views/resources/papers/Papers'
 import CreatePaper from './views/resources/papers/CreatePaper'
@@ -29,53 +29,53 @@ const Routes = () => {
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <NavBar>
+                    <Dashboard>
                         <Home/>
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route path="/courses">
-                    <NavBar>
+                    <Dashboard>
                         <Courses/>
-                    </NavBar>
+                    </Dashboard>
                 </Route>
                     
                 <Route path="/evaluations" >
-                    <NavBar>
+                    <Dashboard>
                         <Evaluation/>
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route path="/feedback">
-                    <NavBar>
+                    <Dashboard>
                         <FeedBack/>
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route path="/resources/main">
-                    <NavBar>
+                    <Dashboard>
                         <Resources
                             resourcesData={resourcesData}
                         />
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route path="/resources/papers">
-                    <NavBar>
+                    <Dashboard>
                         <Papers
                             resourcesData={resourcesData}
                             setResourcesData = {setResourcesData}
                         />
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route path="/resources/create-paper">
-                    <NavBar>
+                    <Dashboard>
                         <CreatePaper
                             resourcesData={resourcesData}
                             setResourcesData = {setResourcesData}
                         />
-                    </NavBar>
+                    </Dashboard>
                 </Route>
 
                 <Route component={NotFound}/>

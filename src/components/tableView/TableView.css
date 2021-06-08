@@ -63,3 +63,16 @@
 .small{
     font-size:12px
 }
+
+#numeroPaginas {
+    list-style: none;
+    text-align: right;
+    
+  }
+  
+#numeroPaginas > li {
+    display:inline;
+    margin-right: 0.3em;
+    user-select: none;
+    cursor: pointer;
+  }

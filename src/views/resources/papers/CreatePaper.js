@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './Papers.css'
-import { useHistory,useLocation } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 
 
 const CreatePaper = (props) => {
@@ -11,7 +11,7 @@ const CreatePaper = (props) => {
     const [file, setFile] = useState(null)
     const [tags,setTags] = useState([])
     const history = useHistory();
-    const location = useLocation();
+/*     const location = useLocation(); */
 
     const CreateNewPaper = () =>{
         
@@ -73,7 +73,7 @@ const CreatePaper = (props) => {
                 <div className="content-bottom">
                     <label>
                         Cargar Archivo:
-                        <input type="file"/>
+                        <input type="file" onChange={(e)=>{setFile(e.target.value)}}/>
                     </label>
                     <label>
                         Tags:

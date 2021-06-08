@@ -8,7 +8,9 @@
                 "description":"Investigación de la Universidad de Boston sobre el rendimiento de los microprocesadores en la mineria de criptomonedas.",
                 "file":"documento.pdf",
                 "courses":[1,3],
-                "tags":["criptomonedas","microprocesador"]
+                "tags":["criptomonedas","microprocesador"],
+                "creationDate":"",
+                "lastModificationDate":""
             },
             {
                 "id":1,
@@ -22,6 +24,60 @@
             {
                 "id":2,
                 "title":"Servicios en la nube y el impacto medioambiental",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":3,
+                "title":"adasd dasda adsdad",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":4,
+                "title":"xxxxxxxx xxxxxxxxxx",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":5,
+                "title":"rrrrrrrrrrrrrrr",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":6,
+                "title":"eeeeeeeeeeeee",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":7,
+                "title":"wwwwwwwww",
+                "authors":["Michael Jackson","Bruno Mars"],
+                "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
+                "file":"documento.pdf",
+                "courses":[1,2],
+                "tags":["cloud","AWS","Azure"]
+            },
+            {
+                "id":8,
+                "title":"asdasdf",
                 "authors":["Michael Jackson","Bruno Mars"],
                 "description":"Los servicios en la nube facilitan en gran parte los procesos de computo para compañias pero a costa del planeta.",
                 "file":"documento.pdf",
