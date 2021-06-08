@@ -13,7 +13,7 @@ const usuario = {
     image:"http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/user-male-icon.png"
 }
 
-const NavBar = ({children}) => {
+const NavBar = () => {
     const [isHidden,setIsHidden] = useState(false)
 
     const activeStyles = {        
@@ -61,7 +61,7 @@ const NavBar = ({children}) => {
                             </div>
                             <p>Cursos</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/resources' activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to='/resources/main' activeStyle={activeStyles}>
                             <div className="icon">
                                 <BiBookBookmark/>
                             </div>
@@ -87,9 +87,6 @@ const NavBar = ({children}) => {
                     <p>Cerrar sesión</p>
                 </div>
             </nav>
-            <div>
-                {children}
-            </div>
         </div>
      );
 }

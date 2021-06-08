@@ -1,4 +1,4 @@
-const makeGet = (url, options = {}) =>{
+/* const makeGet = (url, options = {}) =>{
     const headers = options['headers'] || {};
     const params = options['params'] || {}
     const query =Object.keys(params).map(k => encodeURIComponent(k) + '=' +
@@ -37,3 +37,4 @@ export const fetchRecurso = (id) =>{
     return makeGet (url,{params,headers});
 }
 
+ */
