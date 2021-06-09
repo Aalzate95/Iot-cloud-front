@@ -13,7 +13,8 @@ import Dashboard from './components/dashboard/Dashboard'
 import Resources from './views/resources/Resources';
 import Papers from './views/resources/papers/Papers'
 import CreatePaper from './views/resources/papers/CreatePaper'
-
+import NavBar from './components/navBar/NavBar'
+import Foro from './components/foro/Foro'
 import datosRecursos from './data/dataResources.json'
 
 const Routes = () => {
@@ -49,6 +50,13 @@ const Routes = () => {
                 <Route path="/feedback">
                     <Dashboard>
                         <FeedBack/>
+                    </Dashboard>
+                </Route>
+
+                <Route path="/questions">
+                    <Dashboard>
+                    
+                         <Foro/>
                     </Dashboard>
                 </Route>
 
