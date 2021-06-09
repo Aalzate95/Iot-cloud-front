@@ -1,28 +1,28 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from "react";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
   } from "react-router-dom";
-import Home from './views/home/Home'
-import NotFound from './views/notFound/NotFound'
-import Courses from './views/courses/Courses'
-import Evaluation from './views/evaluation/Evaluation'
-import FeedBack from './views/feedBack/FeedBack'
-import Dashboard from './components/dashboard/Dashboard'
-import Resources from './views/resources/Resources';
-import Papers from './views/resources/papers/Papers'
-import CreatePaper from './views/resources/papers/CreatePaper'
+import Home from "./views/home/Home";
+import NotFound from "./views/notFound/NotFound";
+import Courses from "./views/courses/Courses";
+import Evaluation from "./views/evaluation/Evaluation";
+import FeedBack from "./views/feedBack/FeedBack";
+import Dashboard from "./components/dashboard/Dashboard";
+import Resources from "./views/resources/Resources";
+import Papers from "./views/resources/papers/Papers";
+import CreatePaper from "./views/resources/papers/CreatePaper";
 
-import datosRecursos from './data/dataResources.json'
+import datosRecursos from "./data/dataResources.json";
 
 const Routes = () => {
 
-    const [resourcesData, setResourcesData] = useState(datosRecursos)
+    const [resourcesData, setResourcesData] = useState(datosRecursos);
 
     useEffect(() => {
-        setResourcesData(datosRecursos)
-      }, []) // eslint-disable-line react-hooks/exhaustive-deps
+        setResourcesData(datosRecursos);
+      }, [datosRecursos]);
     
     
     return ( 
@@ -83,7 +83,7 @@ const Routes = () => {
             </Switch>
         </Router>
      );
-}
+};
  
 export default Routes;
  

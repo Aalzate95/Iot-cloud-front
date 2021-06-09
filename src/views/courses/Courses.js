@@ -4,6 +4,7 @@ import DataVideos from "./local/videos.json";
 import Videoscript from "../../components/courses/Videoscript";
 
 
+
 export default class Courses extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +29,9 @@ export default class Courses extends React.Component {
           {/* <h1>Nimatron Anime</h1>           */}
           <Videoscript data={DataVideos} keys={this.state.keys} />
         </div>
+
       </div>
     );
   }
 };
+

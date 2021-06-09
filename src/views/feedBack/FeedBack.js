@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FeedBack = () => {
     return ( 
@@ -6,6 +6,6 @@ const FeedBack = () => {
             FeedBack
         </div>
      );
-}
+};
  
 export default FeedBack;

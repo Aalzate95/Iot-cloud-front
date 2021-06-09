@@ -1,58 +1,58 @@
-import React,{useState,useEffect} from 'react';
-import './Papers.css'
-import TableView from '../../../components/tableView/TableView'
-import { useHistory } from 'react-router-dom';
+import React,{useState,useEffect} from "react";
+import "./Papers.css";
+import TableView from "../../../components/tableView/TableView";
+import { useHistory } from "react-router-dom";
 
 
 const Papers = ({resourcesData,setResourcesData}) => {
-    const[selectedRows,setSelectedRows] = useState([])
-    const[papersData,setPapersData] = useState([])
-    const[ElementsPerPage,setElementsPerPage] = useState(5)
+    const[selectedRows,setSelectedRows] = useState([]);
+    const[papersData,setPapersData] = useState([]);
+    const[ElementsPerPage,setElementsPerPage] = useState(5);
 
     const history = useHistory();
 
     useEffect(() => {
-        setPapersData(resourcesData.results["papers"])
-      }, [resourcesData])
+        setPapersData(resourcesData.results["papers"]);
+      }, [resourcesData]);
 
     const updateSelectedList = id => {
-        const newList = [...selectedRows]
-        const index = newList.indexOf(id)
+        const newList = [...selectedRows];
+        const index = newList.indexOf(id);
         if( index > -1 ){
-            newList.splice(index,1)
+            newList.splice(index,1);
         }
         else{
-            newList.push(id)
+            newList.push(id);
         }
-        setSelectedRows(newList)
-    }
+        setSelectedRows(newList);
+    };
 
-    const onClickDeletePaper = (e) =>{
-        let newList = resourcesData
+    const onClickDeletePaper = () =>{
+        let newList = resourcesData;
         resourcesData.results["papers"].forEach((paper,index)=>{
             if (selectedRows.includes(paper.id)){
-                newList.results.papers.splice(index,1)
+                newList.results.papers.splice(index,1);
             }
-        })
+        });
         
-        setResourcesData(newList)
-        setPapersData(newList.results.papers)
-    }
+        setResourcesData(newList);
+        setPapersData(newList.results.papers);
+    };
     
     const onClickCreatePaper = () =>{
-        history.push('/resources/create-paper')
-    }
+        history.push("/resources/create-paper");
+    };
 
     return ( 
         <div className="Papers">
 
             <div className="btn-actions">
-                <button className="btn-action" onClick={(e)=>{onClickDeletePaper(e)}}>Delete</button>
-                <button className="btn-action" onClick={()=>{onClickCreatePaper()}}>Create</button>
+                <button className="btn-action" onClick={(e)=>{onClickDeletePaper(e);}}>Delete</button>
+                <button className="btn-action" onClick={()=>{onClickCreatePaper();}}>Create</button>
             </div>
             <div>
                 <label>Elementos por pagina: </label>
-                <select onChange={(e)=>{setElementsPerPage(e.target.value)}}>
+                <select onChange={(e)=>{setElementsPerPage(e.target.value);}}>
                     <option defaultValue={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -68,7 +68,7 @@ const Papers = ({resourcesData,setResourcesData}) => {
             />
         </div>
      );
-}
+};
  
 export default Papers;
 

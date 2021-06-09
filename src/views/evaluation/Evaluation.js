@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 
 const Evaluation = () => {
@@ -8,6 +8,6 @@ const Evaluation = () => {
             Evaluation
         </div>
      );
-}
+};
  
 export default Evaluation;

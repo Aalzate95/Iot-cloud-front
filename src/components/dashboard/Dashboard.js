@@ -1,6 +1,6 @@
-import React from 'react';
-import Navbar from '../navBar/NavBar'
-import './Dashboard.css'
+import React from "react";
+import Navbar from "../navBar/NavBar";
+import "./Dashboard.css";
 
 const Dashboard = ({children}) => {
     return ( 
@@ -11,6 +11,6 @@ const Dashboard = ({children}) => {
             </div>
         </div>
      );
-}
+};
  
 export default Dashboard;

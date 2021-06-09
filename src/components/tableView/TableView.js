@@ -1,5 +1,5 @@
-import React,{useState, useEffect} from 'react';
-import './TableView.css'
+import React,{useState, useEffect} from "react";
+import "./TableView.css";
 
 /*
 Componente que permite renderizar en una tabla contenido con un header fijo
@@ -23,13 +23,13 @@ Funcionalidades Pendientes:
 
 const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
 
-    const [currentPage, setCurrentPage] = useState(1)
-    const [orderBy,setOrderBy] = useState(null)
-    const [orderedList,setOrderedList] = useState([])
+    const [currentPage, setCurrentPage] = useState(1);
+    //const [orderBy,setOrderBy] = useState(null);
+    const [orderedList,setOrderedList] = useState([]);
 
     useEffect(() => {
-        setOrderedList(data)
-      }, [data])
+        setOrderedList(data);
+      }, [data]);
 
     /* const SortByTitle = ()=>{
         let newList = orderedList.sort(function(a,b){
@@ -46,20 +46,20 @@ const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
 
 
     const handleChangePage =(e)=>{
-        setCurrentPage(e)
-    }
+        setCurrentPage(e);
+    };
 
     const finalIndex = currentPage * cantPerPage;
     const firstIndex = finalIndex - cantPerPage;
 
-    const elementsPerPages = Object.keys(orderedList).slice(firstIndex, finalIndex)
+    const elementsPerPages = Object.keys(orderedList).slice(firstIndex, finalIndex);
     const numberOfPages = [];
 
     for (let i = 1; i <= Math.ceil(Object.keys(orderedList).length / cantPerPage); i++) {
         numberOfPages.push(i);
     }
-
-    const RenderRows = elementsPerPages.map((element, index) => {
+    
+    const RenderRows = elementsPerPages.map((element) => {
         let content = orderedList[element];
         return(
             <li className="table-row" key={content.id}>
@@ -69,7 +69,7 @@ const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
                         value={content.id} 
                         checked={selectedRows.includes(content.id)} 
                         readOnly 
-                        onClick={()=>{updateSelectedList(content.id)}}
+                        onClick={()=>{updateSelectedList(content.id);}}
                     />
                 </div>
                 <div className="col1 bold">{content.title}</div>
@@ -81,8 +81,8 @@ const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
                     {content.tags.map((e,index)=>(<div key={index}>{e}</div>))}
                 </div>
             </li>
-            )
-    })
+            );
+    });
 
     const renderNumberOfPages = numberOfPages.map(number => {
         return (
@@ -115,7 +115,7 @@ const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
                 {data.length>0?RenderRows:<p>Sin datos</p>}
             </ul>
         </div>
-        )
-}
+        );
+};
  
 export default TableView;
