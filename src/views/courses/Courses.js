@@ -1,5 +1,5 @@
-import React from 'react';
-import './Courses'
+import React from "react";
+import "./Courses"
 import DataVideos from "./local/videos.json";
 import Videoscript from "../../components/courses/Videoscript";
 
