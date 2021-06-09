@@ -1,13 +1,13 @@
-import React from 'react';
-import './Resources.css'
-import { useHistory } from 'react-router-dom';
-import data from '../../data/dataResources.json'
+import React from "react";
+import "./Resources.css";
+import { useHistory } from "react-router-dom";
+import data from "../../data/dataResources.json";
 
 const colors = [
     "rgb(255, 98, 98)",
     "rgb(255, 200, 98)",
     "rgb(98, 255, 98)"
-]
+];
 
 const Resources = () => {
 
@@ -22,8 +22,8 @@ const Resources = () => {
                     <p>Cantidad de elementos: {totalElements}</p>
                 </div>
             </div>
-            )
-    })
+            );
+    });
     return ( 
     <div className="Resources">
         <div className="Resources-cards">
@@ -31,6 +31,6 @@ const Resources = () => {
         </div>
     </div> 
     );
-}
+};
  
 export default Resources;

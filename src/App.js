@@ -1,7 +1,9 @@
-import './App.css';
-import Routes from './Routes'
+import "./App.css";
+import Routes from "./Routes.js";
+
 
 function App() {
+
   return (
     <div className="App">
         <Routes/>

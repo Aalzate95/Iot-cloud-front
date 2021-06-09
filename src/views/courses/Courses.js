@@ -1,5 +1,5 @@
-import React from 'react';
-import './Courses'
+import React from "react";
+import "./Courses";
 
 const Cursos = () => {
     return ( 
@@ -7,6 +7,6 @@ const Cursos = () => {
             Cursos
         </div>
      );
-}
+};
  
 export default Cursos;
