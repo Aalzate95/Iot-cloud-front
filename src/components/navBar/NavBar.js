@@ -55,7 +55,7 @@ const NavBar = () => {
                             </div>
                             <p>Inicio</p>
                         </NavLink>
-                        <NavLink className="Nav_link" activeClassName="activeRoute"  to="/courses" activeStyle={activeStyles}>
+                        <NavLink className="Nav_link" activeClassName="activeRoute"  to="/resources/courses" activeStyle={activeStyles}>
                             <div className="icon">
                                 <IoGrid/>
                             </div>

@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
 import Home from "./views/home/Home";
 import NotFound from "./views/notFound/NotFound";
-import Courses from "./views/courses/Courses";
+import Courses from "./views/resources/courses/Courses";
 import Evaluation from "./views/evaluation/Evaluation";
 import FeedBack from "./views/feedBack/FeedBack";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -34,9 +34,12 @@ const Routes = () => {
                     </Dashboard>
                 </Route>
 
-                <Route path="/courses">
+                <Route path="/resources/courses">
                     <Dashboard>
-                        <Courses/>
+                        <Courses
+                            resourcesData={resourcesData}
+                            setResourcesData = {setResourcesData}
+                        />
                     </Dashboard>
                 </Route>
                     
