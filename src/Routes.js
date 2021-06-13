@@ -13,7 +13,8 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Resources from "./views/resources/Resources";
 import Papers from "./views/resources/papers/Papers";
 import CreatePaper from "./views/resources/papers/CreatePaper";
-
+import Foro from "./views/foro/Foro";
+import TemplateForo from "./views/foro/TemplateForo";
 import datosRecursos from "./data/dataResources.json";
 
 const Routes = () => {
@@ -77,6 +78,20 @@ const Routes = () => {
                         <CreatePaper
                             resourcesData={resourcesData}
                             setResourcesData = {setResourcesData}
+                        />
+                    </Dashboard>
+                </Route>
+
+                <Route path="/foros">
+                    <Dashboard>
+                        <Foro
+                        />
+                    </Dashboard>
+                </Route>
+
+                <Route path="/foro/:id">
+                    <Dashboard>
+                        <TemplateForo
                         />
                     </Dashboard>
                 </Route>
