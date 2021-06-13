@@ -1,0 +1,8 @@
+.Courses{
+    padding-top: 30px;
+}
+
+.Courses-videos{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

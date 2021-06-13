@@ -1,9 +1,10 @@
 import React from "react";
+import "./Videoscript.css";
 
 const Videoscript = (props) => {
   return ( 
-    <div className="content card-deck row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 justify-content-center">
-        <div className="card rounded col col-sm-12 mx-auto my-auto">
+    <div className="Card">
+        <div className="">
           <iframe
             src={props.data["src"]}
             className="card-img-top"
