@@ -3,6 +3,52 @@ import { useParams } from "react-router-dom";
 import "./TemplateForo.css";
 import data from "../../data/dataForo.json";
 
+const RenderReplies = ({reply}) =>{
+    const [isDeleted,setIsDeleted] = useState(reply.deleted)
+
+    const handleDelete = () =>{
+        setIsDeleted(!isDeleted)
+        
+    }
+    return( 
+        <div className="reply" style={{display:`${isDeleted?"none":"block"}`}}>
+            <div className="reply-buttons">
+                <button onClick={()=>{handleDelete()}}>Eliminar</button>
+            </div>
+            <p>@{reply.user} dice:</p>
+            <p>{reply.content}</p>
+        </div>
+    );
+ }
+
+const RenderTopic = ({topic}) =>{
+    const [isHide,setIsHide] = useState(true)
+
+    return(
+        <div className="Topic">
+            <h3>{topic.title}</h3>
+            <p>{topic.description}</p>
+            <p>Autor: @{topic.user}</p>
+            <button onClick={()=>{setIsHide(!isHide)}}>{isHide?"Mostrar":"Ocultar"}</button>
+            <div className="Replies" style={{display:`${isHide?"none":"block"}`}}>
+                {topic.replies.map((reply)=>{
+                    return(
+                            <RenderReplies
+                                reply={reply}
+                                key={reply.id}
+                            />
+                        )
+                })}
+                
+                <textarea placeholder="Responder ..."></textarea>
+                <button>Responder</button>
+              
+            </div>
+        </div>
+    )
+};
+
+
 
 const TemplateForo = () => {
     const [topics,setTopics] = useState([]);
@@ -11,7 +57,6 @@ const TemplateForo = () => {
     
     useEffect(() => {
         getTopicsData(data);
-        
     }, [data]);
 
     const getTopicsData = (data) =>{
@@ -23,46 +68,15 @@ const TemplateForo = () => {
         });
     };
 
-    console.log(topics);
-
-    const RenderReplies = (replie) =>{
-        return( 
-            <div key={replie.id} className="Replie">
-                <p>@{replie.user} dice:</p>
-                <p>{replie.content}</p>
-            </div>
-        );
-     }
-
-    const RenderTopic = (topic) =>{
-        return(
-            <div key={topic.id} className="Topic">
-                <h3>{topic.title}</h3>
-                <p>{topic.description}</p>
-                <p>Autor: @{topic.user}</p>
-                <div className="Replies">
-                    {topic.replies.map((replie)=>{
-                        return(
-                                RenderReplies(replie)
-                            )
-                    })}
-                    
-                    <textarea placeholder="Responder ..."></textarea>
-                    <button>Responder</button>
-                  
-                </div>
-            </div>
-        )
-    };
 
     const RenderTopics = topics.map((topic)=>{
         return(
-            RenderTopic(topic)
+            <RenderTopic
+                topic={topic}
+                key={topic.id}
+            />
             );
     });
-
-    
-
 
     return ( 
         <div className="TemplateForo">

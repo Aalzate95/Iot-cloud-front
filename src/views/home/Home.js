@@ -5,9 +5,9 @@ const Home = () => {
 
 
     return (
-        <div>
-            Home
-            <p>/learn react/</p>
+        <div className="Home">
+            <h1>Bienvenidos a IOT Cloud ESPOL</h1>
+            <span></span>
         </div>
      );
 };
