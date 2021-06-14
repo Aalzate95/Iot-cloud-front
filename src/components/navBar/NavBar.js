@@ -5,7 +5,7 @@ import { FiLogOut } from "react-icons/fi";
 import {IoHome,IoStatsChart,IoGrid} from "react-icons/io5";
 import { FaCommentAlt } from "react-icons/fa";
 import {BiArrowFromRight, BiArrowFromLeft,BiBookBookmark} from "react-icons/bi";
-
+import { VscFeedback } from "react-icons/vsc";
 
 const usuario = {
     name:"Usuario 1",
@@ -78,6 +78,12 @@ const NavBar = () => {
                                 <FaCommentAlt/>
                             </div>
                             <p>Retroalimentación</p>
+                        </NavLink>
+                        <NavLink className="Nav_link" activeClassName="activeRoute" to="/foros" activeStyle={activeStyles}>
+                            <div className="icon">
+                                <VscFeedback/>
+                            </div>
+                            <p>Foro</p>
                         </NavLink>
                 </div>
                 <div className="NavBar-logout">

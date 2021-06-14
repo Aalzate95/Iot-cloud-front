@@ -1,0 +1,142 @@
+{
+    "prev":"",
+    "next":"",
+    "results":[
+        {
+            "id":1,
+            "title":"Ingenieria de Software II",
+            "description":"Foro para el curso de Ingenieria de Software II de la ESPOL.",
+            "user":"Alexander Alzate",
+            "courses":[2,1],
+            "deleted":false,
+            "creationDate":"",
+            "updateDate":"",
+            "topics":[
+                {
+                    "id":"11",
+                    "title":"Documentación de proyectos",
+                    "description":"La documentación de los proyectos es esencial para el entendimiento de como funciona.",
+                    "user":"edapigo",
+                    "deleted":false,
+                    "creationDate":"16/05/2021",
+                    "updateDate":"16/05/2021",
+                    "replies":[
+                        {
+                            "id":"111",
+                            "content":"Correcto, es muy importante documentar bien los proyectos",
+                            "creationDate":"16/05/2021",
+                            "updateDate":"16/05/2021",
+                            "deleted":false,
+                            "user":"aalzate"
+                        },
+                        {
+                            "id":"112",
+                            "content":"A mi me parece que es importante pero dependen de muchos factores",
+                            "creationDate":"16/05/2021",
+                            "updateDate":"16/05/2021",
+                            "deleted":false,
+                            "user":"jdvallejo"
+                        }
+                    ]
+                    
+                },
+                {
+                    "id":"12",
+                    "title":"Diagramas UML",
+                    "description":"Los diagramas UML permiten dar una estructura, generar una idea de como se va a desarrollar un proyecto de software.",
+                    "user":"aalzate",
+                    "deleted":false,
+                    "creationDate":"22/05/2021",
+                    "updateDate":"22/05/2021",
+                    "replies":[
+                        {
+                            "id":"121",
+                            "content":"Es cierto, pero actualmente existen más herramientas similares",
+                            "creationDate":"22/05/2021",
+                            "updateDate":"22/05/2021",
+                            "deleted":false,
+                            "user":"edapigo"
+                        },
+                        {
+                            "id":"122",
+                            "content":"@edapigo, por favor mencionalas o danos fuentes de información para buscarlas e implementarlas",
+                            "creationDate":"22/05/2021",
+                            "updateDate":"22/05/2021",
+                            "deleted":false,
+                            "user":"jdvallejo"
+                        },
+                        {
+                            "id":"123",
+                            "content":"LA VENIDA DEL SEÑOR ESTA CERCA",
+                            "creationDate":"22/05/2021",
+                            "updateDate":"22/05/2021",
+                            "deleted":false,
+                            "user":"user666"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":2,
+            "title":"Estructura de datos",
+            "description":"Foro para el curso de Estructura de datos",
+            "courses":[2,3],
+            "user":"Juliana Guerrero",
+            "deleted":false,
+            "creationDate":"",
+            "updateDate":"",
+            "topics":[
+                {
+                    "id":"21",
+                    "title":"Recursividad y aplicación en situaciones reales",
+                    "description":"Las funciones recursivas, ¿por qué usarlas?",
+                    "user":"edapigo",
+                    "replies":[
+                        {
+                            "id":"211",
+                            "content":"",
+                            "creationDate":"",
+                            "updateDate":"",
+                            "deleted":"",
+                            "user":""
+                        },
+                        {
+                            "id":"212",
+                            "content":"",
+                            "creationDate":"",
+                            "updateDate":"",
+                            "deleted":"",
+                            "user":""
+                        }
+                    ]
+                    
+                },
+                {
+                    "id":"22",
+                    "title":"LinkedList mejores practicas",
+                    "description":"Como y cuando utilizar listas anidadas",
+                    "user":"CarlosJTovar",
+                    "replies":[
+                        {
+                            "id":"221",
+                            "content":"",
+                            "creationDate":"",
+                            "updateDate":"",
+                            "deleted":"",
+                            "user":""
+                        },
+                        {
+                            "id":"222",
+                            "content":"",
+                            "creationDate":"",
+                            "updateDate":"",
+                            "deleted":"",
+                            "user":""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
