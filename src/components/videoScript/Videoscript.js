@@ -3,8 +3,8 @@ import "./Videoscript.css";
 
 const Videoscript = (props) => {
   return ( 
-    <div className="Card">
-        <div className="">
+    <div className="VideoScript">
+        <div className="Card">
           <iframe
             src={props.data["src"]}
             className="card-img-top"
