@@ -1,60 +1,15 @@
 import React,{useState,useEffect} from "react";
 import "./Foro.css";
 import { Link } from "react-router-dom";
-
-const data = {
-    prev:"",
-    next:"",
-    results:[
-        {
-            id:1,
-            title:"Ingenieria de Software II",
-            description:"Foro para el curso de Ingenieria de Software II de la ESPOL.",
-            user:"Alexander Alzate",
-            courses:[2,1],
-            topics:[
-                {
-                    id:"",
-                    title:"",
-                    description:"",
-                    user:"",
-                    replies:[
-                        {
-                            id:"",
-                            content:"",
-                            creationDate:"",
-                            updateDate:"",
-                            deleted:"",
-                            user:""
-                        },
-                        {
-                            id:"",
-                            content:"",
-                            creationDate:"",
-                            updateDate:"",
-                            deleted:"",
-                            user:""
-                        }
-                    ]
-                    
-                },
-                {
-                    title:"",
-                    description:"",
-                    creator:"",
-                }
-            ]
-        }
-    ]
-};
+import dataForo from "../../data/dataForo.json";
 
 const Foro = () => {
     const[foros, setForos] = useState([]);
     /* const history = useHistory(); */
 
     useEffect(() => {
-        setForos(data.results);
-      }, [data]);
+        setForos(dataForo.results);
+      }, [dataForo]);
 
     console.log(foros);
 

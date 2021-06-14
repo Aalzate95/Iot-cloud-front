@@ -1,0 +1,28 @@
+.TemplateForo{
+    padding-top: 30px;
+}
+
+.Topic{
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding:10px;
+}
+
+.Replies{
+    margin-left:50px;
+}
+
+.Replie{
+    margin: 5px 0 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding:10px;
+}
+
+textarea{
+    resize: none;
+    width:80%;
+    margin: 20px 0 0 0;
+
+}
