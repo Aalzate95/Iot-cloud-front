@@ -90,28 +90,28 @@
         ],
         "courses":[
             {
-                "title": "Ergo Proxy",
-                "src": "https://www.youtube-nocookie.com/embed/oAXrRWLKzko",
-                "subject": "Opening",
-                "author": "Monoral"
+                "title": "Data Analytics Crash Course: Teach Yourself in 30 Days",
+                "src": "https://www.youtube-nocookie.com/embed/jcTj6FgWOpo",
+                "subject": "Data Science",
+                "author": "Free Code Camp"
             },
             {
-                "title": "Ergo Proxy",
-                "src": "https://www.youtube-nocookie.com/embed/oAXrRWLKzko",
-                "subject": "Opening",
-                "author": "Monoral"
+                "title": "DevOps Engineering Course For Beginners",
+                "src": "https://www.youtube-nocookie.com/embed/j5Zsa_eOXeY",
+                "subject": "Dev Ops",
+                "author": "Free Code Camp"
             },
             {
-                "title": "Ergo Proxy",
-                "src": "https://www.youtube-nocookie.com/embed/oAXrRWLKzko",
-                "subject": "Opening",
-                "author": "Monoral"
+                "title": "Odin Project vs Free Code Camp",
+                "src": "https://www.youtube-nocookie.com/embed/Y9mTrj0oR8A",
+                "subject": "Learning",
+                "author": "Dorian Develops"
             },
             {
-                "title": "Ergo Proxy",
-                "src": "https://www.youtube-nocookie.com/embed/oAXrRWLKzko",
-                "subject": "Opening",
-                "author": "Monoral"
+                "title": "Ruby Programming Language - Full Course",
+                "src": "https://www.youtube-nocookie.com/embed/t_ispmWmdjY",
+                "subject": "Ruby",
+                "author": "Free Code Camp"
             },
             {
                 "title": "Ergo Proxy",

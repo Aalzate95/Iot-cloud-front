@@ -1,9 +1,6 @@
 import React,{useState,useEffect} from "react";
 import "./Courses.css";
 import Videoscript from "../../../components/videoScript/Videoscript";
-/* 
-  Tengo una duda con respecto a los "cursos", estos siempre serán videos de Youtube?
-*/
 
 const Courses = (props) => {
   const [dataVideos,setDataVideos] = useState([]);
@@ -23,7 +20,7 @@ const Courses = (props) => {
   return ( 
     <div className="Courses">
       <div>
-        <p>Filtros de busqueda</p>
+        <p>Filtros de búsqueda</p>
       </div>
       <div className="Courses-videos">
         {createVideos}
