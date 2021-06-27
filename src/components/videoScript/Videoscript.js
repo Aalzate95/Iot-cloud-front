@@ -18,12 +18,10 @@ const Videoscript = (props) => {
             <h5 className="card-title">{props.data["title"]}</h5>
             <p className="card-text">
               <br />
-              {props.data["oped"]}
-              <br />{" "}
+              {props.data["subject"]}
+              <br />
               <i>
-                <strong>"{props.data["songname"]}"</strong>
-                <br />
-                {props.data["artist"]}
+                {props.data["author"]}
               </i>
             </p>
           </div>
