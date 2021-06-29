@@ -12,7 +12,7 @@ const Papers = ({resourcesData,setResourcesData}) => {
     const history = useHistory();
 
     useEffect(() => {
-        setPapersData(resourcesData.results["papers"]);
+        setPapersData(resourcesData.results["Papers"]);
       }, [resourcesData]);
 
     const updateSelectedList = id => {
@@ -29,7 +29,7 @@ const Papers = ({resourcesData,setResourcesData}) => {
 
     const onClickDeletePaper = () =>{
         let newList = resourcesData;
-        resourcesData.results["papers"].forEach((paper,index)=>{
+        resourcesData.results["Papers"].forEach((paper,index)=>{
             if (selectedRows.includes(paper.id)){
                 newList.results.papers.splice(index,1);
             }
@@ -47,11 +47,11 @@ const Papers = ({resourcesData,setResourcesData}) => {
         <div className="Papers">
 
             <div className="btn-actions">
-                <button className="btn-action" onClick={(e)=>{onClickDeletePaper(e);}}>Delete</button>
-                <button className="btn-action" onClick={()=>{onClickCreatePaper();}}>Create</button>
+                <button className="btn-action" onClick={(e)=>{onClickDeletePaper(e);}}>Borrar</button>
+                <button className="btn-action" onClick={()=>{onClickCreatePaper();}}>Crear</button>
             </div>
             <div>
-                <label>Elementos por pagina: </label>
+                <label>Elementos por página: </label>
                 <select onChange={(e)=>{setElementsPerPage(e.target.value);}}>
                     <option defaultValue={5}>5</option>
                     <option value={10}>10</option>

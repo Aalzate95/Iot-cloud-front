@@ -35,7 +35,7 @@ const Routes = () => {
                     </Dashboard>
                 </Route>
 
-                <Route path="/resources/courses">
+                <Route path="/resources/Cursos">
                     <Dashboard>
                         <Courses
                             resourcesData={resourcesData}
@@ -64,7 +64,7 @@ const Routes = () => {
                     </Dashboard>
                 </Route>
 
-                <Route path="/resources/papers">
+                <Route path="/resources/Papers">
                     <Dashboard>
                         <Papers
                             resourcesData={resourcesData}

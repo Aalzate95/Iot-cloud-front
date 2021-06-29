@@ -18,11 +18,11 @@ const Courses = (props) => {
           );
   });
   return ( 
-    <div className="Courses">
+    <div className="Cursos">
       <div>
         <p>Filtros de búsqueda</p>
       </div>
-      <div className="Courses-videos">
+      <div className="Cursos-videos">
         {createVideos}
       </div>
     </div>

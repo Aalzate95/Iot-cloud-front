@@ -16,8 +16,8 @@ const CreatePaper = (props) => {
     const CreateNewPaper = () =>{
         
         let newList = props.resourcesData;/* location.state.papersData */
-        let id = newList.results["papers"].length;
-        newList.results["papers"].push({
+        let id = newList.results["Papers"].length;
+        newList.results["Papers"].push({
                 id,
                 title, 
                 description, 
@@ -28,7 +28,7 @@ const CreatePaper = (props) => {
             });
         props.setResourcesData(newList);
         /* location.setPapersData(newList) */
-        history.push("/resources/papers");
+        history.push("/resources/Papers");
     };
 
     const handleChangeSelect = (e)=>{
@@ -39,7 +39,7 @@ const CreatePaper = (props) => {
     return ( 
         <div className="create-paper-form">
             <div className="go-back">
-                <p onClick={()=>{history.push("/resources/papers");}}>Volver</p>
+                <p onClick={()=>{history.push("/resources/Papers");}}>Volver</p>
             </div>
             <h3>Formulario creación Paper</h3>
             <div className="form-content">
@@ -83,7 +83,7 @@ const CreatePaper = (props) => {
             </div>
 
             <div className="btn-actions">
-                <button className="btn-action" onClick={()=>{history.push("/resources/papers");}}>Cancelar</button>
+                <button className="btn-action" onClick={()=>{history.push("/resources/Papers");}}>Cancelar</button>
                 <button className="btn-action" onClick={()=>{CreateNewPaper();}}>Crear</button>
 
             </div>
