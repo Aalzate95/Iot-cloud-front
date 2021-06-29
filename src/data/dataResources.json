@@ -1,6 +1,6 @@
 {
     "results":{
-        "papers":[
+        "Papers Investigación":[
             {
                 "id":0,
                 "title":"Parametros para medir rendimiento de microprocesadores",
@@ -85,10 +85,10 @@
                 "tags":["cloud","AWS","Azure"]
             }
         ],
-        "tutorials":[
+        "Tutoriales":[
 
         ],
-        "courses":[
+        "Cursos":[
             {
                 "title": "Data Analytics Crash Course: Teach Yourself in 30 Days",
                 "src": "https://www.youtube-nocookie.com/embed/jcTj6FgWOpo",

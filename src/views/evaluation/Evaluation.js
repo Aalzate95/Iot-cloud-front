@@ -5,7 +5,7 @@ const Evaluation = () => {
     
     return ( 
         <div>
-            Evaluation
+            Evaluación
         </div>
      );
 };

@@ -6,7 +6,7 @@ const Courses = (props) => {
   const [dataVideos,setDataVideos] = useState([]);
 
   useEffect(() => {
-    setDataVideos(props.resourcesData.results["courses"]);
+    setDataVideos(props.resourcesData.results["Cursos"]);
   }, [props.resourcesData]);
 
   const createVideos = dataVideos.map((video,index)=>{
