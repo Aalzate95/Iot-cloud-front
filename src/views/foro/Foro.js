@@ -16,7 +16,7 @@ const Foro = () => {
     return ( 
         <div className="Foro">
             <div>
-                filtros de busqueda y ordenamiento
+                Filtros de búsqueda y ordenamiento
             </div>
             <ul className="table-style">
                 <li className="table-header">
@@ -24,7 +24,7 @@ const Foro = () => {
                     <div className="col1">Titulo</div>
                     <div className="col2">Descripción</div>
                     <div className="col3">Creador</div>
-                    <div className="col4">cursos</div>
+                    <div className="col4">Paralelos</div>
                 </li>
             </ul>
             <ul className="content-table-style">

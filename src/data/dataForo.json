@@ -4,8 +4,8 @@
     "results":[
         {
             "id":1,
-            "title":"Ingenieria de Software II",
-            "description":"Foro para el curso de Ingenieria de Software II de la ESPOL.",
+            "title":"Ingeniería de Software II",
+            "description":"Foro para el curso de Ingeniería de Software II de la ESPOL.",
             "user":"Alexander Alzate",
             "courses":[2,1],
             "deleted":false,
@@ -15,7 +15,7 @@
                 {
                     "id":"11",
                     "title":"Documentación de proyectos",
-                    "description":"La documentación de los proyectos es esencial para el entendimiento de como funciona.",
+                    "description":"La documentación de los proyectos es esencial para el entendimiento de cómo funciona.",
                     "user":"edapigo",
                     "deleted":false,
                     "creationDate":"16/05/2021",
@@ -31,7 +31,7 @@
                         },
                         {
                             "id":"112",
-                            "content":"A mi me parece que es importante pero dependen de muchos factores",
+                            "content":"A mí me parece que es importante pero dependen de muchos factores",
                             "creationDate":"16/05/2021",
                             "updateDate":"16/05/2021",
                             "deleted":false,
@@ -43,7 +43,7 @@
                 {
                     "id":"12",
                     "title":"Diagramas UML",
-                    "description":"Los diagramas UML permiten dar una estructura, generar una idea de como se va a desarrollar un proyecto de software.",
+                    "description":"Los diagramas UML permiten dar una estructura, generar una idea de cómo se va a desarrollar un proyecto de software.",
                     "user":"aalzate",
                     "deleted":false,
                     "creationDate":"22/05/2021",
@@ -59,7 +59,7 @@
                         },
                         {
                             "id":"122",
-                            "content":"@edapigo, por favor mencionalas o danos fuentes de información para buscarlas e implementarlas",
+                            "content":"@edapigo, por favor menciónalas o danos fuentes de información para buscarlas e implementarlas",
                             "creationDate":"22/05/2021",
                             "updateDate":"22/05/2021",
                             "deleted":false,
@@ -67,7 +67,7 @@
                         },
                         {
                             "id":"123",
-                            "content":"LA VENIDA DEL SEÑOR ESTA CERCA",
+                            "content":"LA VENIDA DEL SEÑOR ESTÁ CERCA",
                             "creationDate":"22/05/2021",
                             "updateDate":"22/05/2021",
                             "deleted":false,
@@ -114,8 +114,8 @@
                 },
                 {
                     "id":"22",
-                    "title":"LinkedList mejores practicas",
-                    "description":"Como y cuando utilizar listas anidadas",
+                    "title":"LinkedList -- Mejores prácticas",
+                    "description":"Cómo y cuándo utilizar listas anidadas",
                     "user":"CarlosJTovar",
                     "replies":[
                         {

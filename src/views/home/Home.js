@@ -8,6 +8,7 @@ const Home = () => {
         <div className="Home">
             <h1>Bienvenidos a IOT Cloud ESPOL</h1>
             <span></span>
+            <h3>Changelog (En desarrollo)</h3>
         </div>
      );
 };

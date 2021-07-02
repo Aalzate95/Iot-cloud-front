@@ -6,7 +6,7 @@ const Courses = (props) => {
   const [dataVideos,setDataVideos] = useState([]);
 
   useEffect(() => {
-    setDataVideos(props.resourcesData.results["courses"]);
+    setDataVideos(props.resourcesData.results["Cursos"]);
   }, [props.resourcesData]);
 
   const createVideos = dataVideos.map((video,index)=>{
@@ -18,11 +18,11 @@ const Courses = (props) => {
           );
   });
   return ( 
-    <div className="Courses">
+    <div className="Cursos">
       <div>
         <p>Filtros de búsqueda</p>
       </div>
-      <div className="Courses-videos">
+      <div className="Cursos-videos">
         {createVideos}
       </div>
     </div>
