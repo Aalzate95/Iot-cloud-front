@@ -1,19 +1,15 @@
-import React,{useState,useEffect} from "react";
-import "./Papers.css";
+import React,{useState,useEffect} from 'react';
+import './Tutorials.css'
 import TableView from "../../../components/tableView/TableView";
-import { useHistory } from "react-router-dom";
 
-
-const Papers = ({resourcesData,setResourcesData}) => {
-    const[selectedRows,setSelectedRows] = useState([]);
-    const[papersData,setPapersData] = useState([]);
+const Tutorials = (props) => {
     const[ElementsPerPage,setElementsPerPage] = useState(5);
-
-    const history = useHistory();
+    const[selectedRows,setSelectedRows] = useState([]);
+    const[tutorialsData,setTutorialsData] = useState([]);
 
     useEffect(() => {
-        setPapersData(resourcesData.results["Papers"]);
-      }, [resourcesData]);
+        setTutorialsData(props.resourcesData.results["Tutorials"]);
+      }, [props.resourcesData]);
 
     const updateSelectedList = id => {
         const newList = [...selectedRows];
@@ -27,28 +23,11 @@ const Papers = ({resourcesData,setResourcesData}) => {
         setSelectedRows(newList);
     };
 
-    const onClickDeletePaper = () =>{
-        let newList = resourcesData;
-        resourcesData.results["Papers"].forEach((paper,index)=>{
-            if (selectedRows.includes(paper.id)){
-                newList.results.papers.splice(index,1);
-            }
-        });
-        
-        setResourcesData(newList);
-        setPapersData(newList.results.papers);
-    };
-    
-    const onClickCreatePaper = () =>{
-        history.push("/resources/create-paper");
-    };
-
     return ( 
-        <div className="Papers">
-
+        <div className="">
             <div className="btn-actions">
-                <button className="btn-action" onClick={(e)=>{onClickDeletePaper(e);}}>Borrar</button>
-                <button className="btn-action" onClick={()=>{onClickCreatePaper();}}>Crear</button>
+                <button className="btn-action" onClick={(e)=>{}}>Borrar</button>
+                <button className="btn-action" onClick={()=>{}}>Crear</button>
             </div>
             <div>
                 <label>Elementos por página: </label>
@@ -61,13 +40,13 @@ const Papers = ({resourcesData,setResourcesData}) => {
                 </select>
             </div>
             <TableView
-                data={papersData}
+                data={tutorialsData}
                 selectedRows={selectedRows}
                 updateSelectedList={updateSelectedList}
                 cantPerPage={ElementsPerPage}
             />
         </div>
      );
-};
+}
  
-export default Papers;
+export default Tutorials;
