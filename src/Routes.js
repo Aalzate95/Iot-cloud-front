@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useCallback} from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -21,6 +21,8 @@ import datosRecursos from "./data/dataResources.json";
 const Routes = () => {
 
     const [resourcesData, setResourcesData] = useState(datosRecursos);
+    const [, updateState] = useState();
+    const forceUpdate = useCallback(() => updateState({}), []);
 
     useEffect(() => {
         setResourcesData(datosRecursos);
@@ -95,6 +97,7 @@ const Routes = () => {
                 <Route path="/foros">
                     <Dashboard>
                         <Foro
+                            
                         />
                     </Dashboard>
                 </Route>
@@ -102,6 +105,7 @@ const Routes = () => {
                 <Route path="/foro/:id">
                     <Dashboard>
                         <TemplateForo
+                            forceUpdate={forceUpdate}
                         />
                     </Dashboard>
                 </Route>

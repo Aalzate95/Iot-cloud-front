@@ -21,12 +21,31 @@ const RenderReplies = ({reply}) =>{
     );
  }
 
-const RenderTopic = ({topic}) =>{
+const RenderTopic = ({topic,forceUpdate}) =>{
     const [isHide,setIsHide] = useState(true)
+    const [isOpened,setIsOpened] = useState(true)
+
+    useEffect(() => {
+        setIsOpened(topic.isOpened);
+    }, [topic]);
+
+    const HandleChangeIsOpened =() =>{
+        setIsOpened(!isOpened)
+        forceUpdate()
+    }
 
     return(
         <div className="Topic">
-            <h3>{topic.title}</h3>
+            <div className="Topic-header">
+                <h3>{topic.title}</h3>
+                <div className="status">
+                    <h3 style={{color:`${isOpened?"#54bb5d":"red"}`}}>{isOpened?"Abierto":"Cerrado"}</h3>
+                    <label className="switch">
+                        <input type="checkbox" checked={isOpened} onChange={()=>{HandleChangeIsOpened()}}/>
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+            </div>
             <p>{topic.description}</p>
             <p>Autor: @{topic.user}</p>
             <button onClick={()=>{setIsHide(!isHide)}}>{isHide?"Mostrar":"Ocultar"}</button>
@@ -39,9 +58,14 @@ const RenderTopic = ({topic}) =>{
                             />
                         )
                 })}
-                
-                <textarea placeholder="Responder ..."></textarea>
-                <button>Responder</button>
+                <div className="Answer" style={{display:`${isOpened?"inline":"none"}`}}>
+                    <textarea placeholder="Responder ..."></textarea>
+                    <div>
+                        <label htmlFor="uploadImage" name="Image_Uploads">Cargar imagen: </label>
+                        <input type="file" accept="image/*" id="uploadImage"/>
+                        <button>Responder</button>
+                    </div>
+                </div>
               
             </div>
         </div>
@@ -50,7 +74,7 @@ const RenderTopic = ({topic}) =>{
 
 
 
-const TemplateForo = () => {
+const TemplateForo = (props) => {
     const [topics,setTopics] = useState([]);
 
     const {id} = useParams();
@@ -74,6 +98,7 @@ const TemplateForo = () => {
             <RenderTopic
                 topic={topic}
                 key={topic.id}
+                forceUpdate={props.forceUpdate}
             />
             );
     });

@@ -18,6 +18,7 @@
                     "description":"La documentación de los proyectos es esencial para el entendimiento de cómo funciona.",
                     "user":"edapigo",
                     "deleted":false,
+                    "isOpened":true,
                     "creationDate":"16/05/2021",
                     "updateDate":"16/05/2021",
                     "replies":[
@@ -46,6 +47,7 @@
                     "description":"Los diagramas UML permiten dar una estructura, generar una idea de cómo se va a desarrollar un proyecto de software.",
                     "user":"aalzate",
                     "deleted":false,
+                    "isOpened":true,
                     "creationDate":"22/05/2021",
                     "updateDate":"22/05/2021",
                     "replies":[
