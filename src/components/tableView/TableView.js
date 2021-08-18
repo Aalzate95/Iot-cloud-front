@@ -75,10 +75,10 @@ const TableView = ({data,selectedRows,updateSelectedList,cantPerPage=5}) =>{
                 <div className="col1 bold">{content.title}</div>
                 <div className="col2">{content.description}</div>
                 <div className="col3">
-                    {content.courses.map((e,index)=>(<div key={index}>{e}</div>))}
+                    {content.courses.map((e,index)=>(<div key={index}>{e+","}</div>))}
                 </div>
                 <div className="col4 small bold">
-                    {content.tags.map((e,index)=>(<div key={index}>{e}</div>))}
+                    {content.tags.map((e,index)=>(<div key={index}>{e+","}</div>))}
                 </div>
             </li>
             );
