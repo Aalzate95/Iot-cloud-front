@@ -94,6 +94,7 @@
                     "title":"Recursividad y aplicación en situaciones reales",
                     "description":"Las funciones recursivas, ¿por qué usarlas?",
                     "user":"edapigo",
+                    "isOpened":true,
                     "replies":[
                         {
                             "id":"211",
@@ -119,6 +120,7 @@
                     "title":"LinkedList -- Mejores prácticas",
                     "description":"Cómo y cuándo utilizar listas anidadas",
                     "user":"CarlosJTovar",
+                    "isOpened":false,
                     "replies":[
                         {
                             "id":"221",
